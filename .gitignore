@@ -1,0 +1,7 @@
+03_CAD/
+04_CFD/
+*.prt
+*.wbpj
+*_files/
+.ipynb_checkpoints/
+__pycache__/
