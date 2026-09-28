@@ -23,6 +23,7 @@ load of a small hybrid-electric aircraft, and quantify the cooling drag.
 | Coolant into heat exchanger | 70 °C | 60 °C + 10 °C rise |
 | Coolant out of heat exchanger | 60 °C | Must meet electronics inlet limit |
 | Max coolant-side pressure drop across HX | 35 kPa | Keeps pump small; starting assumption |
+| Coolant flow | 0.286 kg/s (16.4 L/min) | From Calc 02 |
 
 ## 4. Sizing condition: hot-day climb
 | Item | Value |
@@ -71,3 +72,5 @@ Full calculations: [Calc 01](../02_HandCalcs/calc_01_air_properties.md)
 ## 9. Open questions
 - Ground operations: V = 0, so no ram airflow. Options: fan, prop wash,
   thermal mass with a time limit, or power limits. Evaluate after Step 3.
+  - Confirm the 60 °C coolant inlet limit against actual inverter and motor
+  datasheets (junction temperature limit minus junction-to-coolant rise).

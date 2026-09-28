@@ -26,3 +26,32 @@
    time limit, or power limits), and a hot-day ground hold may be the true
    sizing case.
 
+## 2026-09-27
+- **Did:** Step 2 energy balance: coolant and air mass flows, heat capacity
+  rates, frontal area check, ΔT_h sensitivity. Worked all steps on paper.
+  See [Calc 02](../02_HandCalcs/calc_02_energy_balance.md) for full calculations.
+- **Broke:** Notation: first labeled the coolant C_c. Fix: textbook convention
+  is h = hot (coolant), c = cold (air).
+- **Learned:**
+  - At steady state, energy in = energy out; any imbalance is stored and
+    raises temperature until a new balance forms.
+  - Halving ΔT_h doubles flow, roughly quadruples pressure drop, and raises
+    pump power about eightfold.
+  - Air is C_min, which is why air-cooled heat exchangers are large.
+  - The 60 °C coolant limit traces back to semiconductor junction
+    temperature minus the junction-to-coolant temperature rise.
+- **Next:** Step 3, heat exchanger core sizing (effectiveness-NTU).
+
+### Homework answers
+1. At steady state nothing changes with time, so energy in must equal energy
+   out. If the coolant gained 10 kW but lost only 8 kW, the extra 2 kW would
+   be stored and the temperature would rise until the heat exchanger rejected
+   the full 10 kW, possibly above the 60 °C limit.
+2. Halving ΔT_h from 10 to 5 °C doubles coolant flow (16.4 → 32.8 L/min).
+   The electronics see cooler, more uniform coolant, but pressure drop
+   roughly quadruples (violating the 35 kPa limit), pump power rises about
+   eightfold, and the heat exchanger needs about 9% more area.
+3. At 8 m/s face velocity, the 0.10 m² limit requires ΔT_c ≥ 12.6 °C.
+   Larger ΔT_c reduces air flow and frontal area but requires higher
+   effectiveness (a deeper, heavier core). The optimum lies between about
+   13 and 30 °C, to be found in the trade study.
